@@ -1,0 +1,21 @@
+---
+- name: update cache
+  apt:
+    update_cache: true
+    cache_valid_time: 3600
+    force: true
+  register: apt_update
+  until: apt_update is success
+  retries: 4
+  delay: 20
+
+- name: update all packages
+  apt:
+    upgrade: safe
+    state: present
+
+- name: install package
+  apt:
+    name: "{{ item }}"
+    state: present
+  loop: "{{ packages }}"

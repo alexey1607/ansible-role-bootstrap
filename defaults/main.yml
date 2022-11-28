@@ -1,0 +1,29 @@
+---
+packages:
+  - wget
+  - curl
+  - mc
+  - tcpdump
+  - htop
+  - vim
+  - unzip
+  - iotop
+  - atop
+  - net-tools
+  - iftop
+  - nmap
+  - jq
+  - sysstat
+  - netcat
+  - traceroute
+  - git
+  - tmux
+  - bzip2
+  - zip
+  - rsync
+  - bind9-utils
+  - ngrep
+  - nicstat
+  - iostat
+  - ifstat
+  - tree
