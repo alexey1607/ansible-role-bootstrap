@@ -7,6 +7,8 @@ packages:
   - htop
   - vim
   - unzip
+  - tar
+  - gzip
   - iotop
   - atop
   - net-tools
@@ -27,3 +29,4 @@ packages:
   - iostat
   - ifstat
   - tree
+  - at
