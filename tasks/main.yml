@@ -1,6 +1,6 @@
 ---
 - name: update cache
-  apt:
+  ansible.builtin.apt:
     update_cache: true
     cache_valid_time: 3600
     force: true
@@ -10,7 +10,7 @@
   delay: 20
 
 - name: update all packages
-  apt:
+  ansible.builtin.apt:
     upgrade: safe
     state: present
 

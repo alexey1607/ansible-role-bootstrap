@@ -29,3 +29,4 @@ packages:
   - ifstat
   - tree
   - at
+  - rsync
