@@ -16,7 +16,6 @@ packages:
   - nmap
   - jq
   - sysstat
-  - netcat
   - traceroute
   - git
   - tmux
