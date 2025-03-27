@@ -58,3 +58,39 @@ Author Information
 ------------------
 
 Alexey
+
+example config
+```
+[defaults]
+roles_path = ./roles
+log_path = ./main.log
+gathering = smart
+forks = 30
+inventory = ./hosts.ini
+fact_caching = ansible.builtin.jsonfile
+fact_caching_connection = ./ansible_facts
+cache_timeout = 36000
+host_key_checking = False
+remote_user = root
+private_key_file =  ~/.ssh/id_rsa
+# Use the YAML callback plugin.
+stdout_callback = json
+# Use the stdout_callback when running ad-hoc commands.
+bin_ansible_callbacks = True
+
+[privilege_escalation]
+become = True
+become_method = sudo
+become_user = root
+become_ask_pass = False
+
+[ssh_connection]
+pipelining = True
+ssh_args = -o ControlMaster=auto -o ControlPersist=15m
+transfer_method = piped
+
+[inventory]
+cache = yes
+cache_connection = /tmp/ansible_inventory
+
+```
